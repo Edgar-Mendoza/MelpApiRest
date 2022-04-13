@@ -1,0 +1,63 @@
+<h1>Show Restaurant</h1>
+
+<ul>
+
+  <li>
+    <strong>Code:</strong>
+    <%= @restaurant.code %>
+  </li>
+
+  <li>
+    <strong>Rating:</strong>
+    <%= @restaurant.rating %>
+  </li>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @restaurant.name %>
+  </li>
+
+  <li>
+    <strong>Site:</strong>
+    <%= @restaurant.site %>
+  </li>
+
+  <li>
+    <strong>Email:</strong>
+    <%= @restaurant.email %>
+  </li>
+
+  <li>
+    <strong>Phone:</strong>
+    <%= @restaurant.phone %>
+  </li>
+
+  <li>
+    <strong>Street:</strong>
+    <%= @restaurant.street %>
+  </li>
+
+  <li>
+    <strong>City:</strong>
+    <%= @restaurant.city %>
+  </li>
+
+  <li>
+    <strong>State:</strong>
+    <%= @restaurant.state %>
+  </li>
+
+  <li>
+    <strong>Lat:</strong>
+    <%= @restaurant.lat %>
+  </li>
+
+  <li>
+    <strong>Lng:</strong>
+    <%= @restaurant.lng %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.restaurant_path(@conn, :edit, @restaurant) %></span> |
+<span><%= link "Back", to: Routes.restaurant_path(@conn, :index) %></span>

@@ -1,0 +1,47 @@
+<h1>Listing Restaurants</h1>
+<span><%= link "Back", to: Routes.page_path(@conn, :index) %></span>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Rating</th>
+      <th>Name</th>
+      <th>Site</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Street</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Lat</th>
+      <th>Lng</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for restaurant <- @restaurants do %>
+    <tr>
+      <td><%= restaurant.code %></td>
+      <td><%= restaurant.rating %></td>
+      <td><%= restaurant.name %></td>
+      <td><%= restaurant.site %></td>
+      <td><%= restaurant.email %></td>
+      <td><%= restaurant.phone %></td>
+      <td><%= restaurant.street %></td>
+      <td><%= restaurant.city %></td>
+      <td><%= restaurant.state %></td>
+      <td><%= restaurant.lat %></td>
+      <td><%= restaurant.lng %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.restaurant_path(@conn, :show, restaurant) %></span>
+        <span><%= link "Edit", to: Routes.restaurant_path(@conn, :edit, restaurant) %></span>
+        <span><%= link "Delete", to: Routes.restaurant_path(@conn, :delete, restaurant), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Restaurant", to: Routes.restaurant_path(@conn, :new) %></span>
