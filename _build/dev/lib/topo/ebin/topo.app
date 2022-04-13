@@ -1,0 +1,10 @@
+{application,topo,
+             [{applications,[kernel,stdlib,elixir,logger,geo,seg_seg,vector]},
+              {description,"Geometry library for determining spatial relationships between geometries\n"},
+              {modules,['Elixir.Topo','Elixir.Topo.Cleaner',
+                        'Elixir.Topo.Contains','Elixir.Topo.Intersects',
+                        'Elixir.Topo.LineLine','Elixir.Topo.LineRing',
+                        'Elixir.Topo.PointLine','Elixir.Topo.PointRing',
+                        'Elixir.Topo.RingRing','Elixir.Topo.Util']},
+              {registered,[]},
+              {vsn,"0.5.0"}]}.
