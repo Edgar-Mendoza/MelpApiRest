@@ -21,8 +21,7 @@ config :logger, level: :info
 #
 #     config :melp, MelpWeb.Endpoint,
 #       ...,
-url: [scheme: "https", host: "dry-chamber-13954.herokuapp.com", port: 443],
-force_ssl: [rewrite_on: [:x_forwarded_proto]],
+#       url: [host: "example.com", port: 443],
 #       https: [
 #         ...,
 #         port: 443,
